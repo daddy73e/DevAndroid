@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorCrossingsGray"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCrossingsWhite">
+
+            <TextView
+                android:text="@string/example_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/txtNumber"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:text="@string/timer"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_below="@id/txtNumber"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_height="50dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickStart"
+                    android:text="@string/start"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickStop"
+                    android:text="@string/stop"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/layoutAwait"
+            android:layout_below="@id/layoutTimer"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="100dp"
+            android:background="@color/colorCrossingsWhite">
+
+            <TextView
+                android:text="@string/example_quiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+
+            <Button
+                android:id="@+id/btnQuizStart"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/quiz"
+                android:onClick="onClickQuiz"
+                android:layout_height="50dp"/>
+
+            <LinearLayout
+                android:id="@+id/layoutQuiz"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtQuiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_quiz"/>
+
+                <TextView
+                    android:id="@+id/txtQuizTimer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="center"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/txtAnswer"
+                    android:layout_marginStart="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btnRetry"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/retry"
+                    android:layout_width="wrap_content"
+                    android:onClick="onClickRetry"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">AndroidKotlin</string>
+    <string name="app_name">Daddy73Android</string>
+    <string name="main_title">Dev Android</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="timer">Timer</string>
+    <string name="quiz">Quiz</string>
+    <string name="txt_quiz">How old is daddy73?</string>
+    <string name="txt_answer">33 years</string>
+    <string name="retry">Retry</string>
+    <string name="example_timer">Example Timer</string>
+    <string name="example_quiz">Example Quiz</string>
 </resources>

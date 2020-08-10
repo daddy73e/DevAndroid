@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Daddy73Android</string>
+    <string name="main_title">Dev Android</string>
+    <string name="start">시작</string>
+    <string name="stop">정지</string>
+    <string name="timer">타이머</string>
+    <string name="quiz">퀴즈</string>
+    <string name="txt_quiz">daddy73 나이는?</string>
+    <string name="txt_answer">33살</string>
+    <string name="retry">다시하기</string>
+    <string name="example_timer">예제 타이머</string>
+    <string name="example_quiz">예제 퀴즈</string>
+</resources>

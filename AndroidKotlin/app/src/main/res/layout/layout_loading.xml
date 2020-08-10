@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/layoutBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLoadingBg">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:indeterminateTint="@color/colorCrossingsDarkPurple" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_button_default_blue_radius"
+            android:textColor="@color/colorCrossingsWhite"
+            android:text="@string/stop" />
+
+    </RelativeLayout>
+
+</layout>
