@@ -18,6 +18,8 @@
         </activity>
 
         <activity android:name=".activity.CoroutineActivity"/>
+        <activity android:name=".mvvm.MVVMActivity"/>
+
 
     </application>
 

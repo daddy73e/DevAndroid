@@ -11,6 +11,7 @@ import com.daddy73e.androidkotlin.adapter.MainListAdapter
 import com.daddy73e.androidkotlin.databinding.ActivityMainBinding
 import com.daddy73e.androidkotlin.listener.RecyclerItemClickListener
 import com.daddy73e.androidkotlin.model.RecyclerViewItem
+import com.daddy73e.androidkotlin.mvvm.MVVMActivity
 
 
 /* 기본, 코틀린에서 RecyclerView 만들기 */
@@ -60,6 +61,8 @@ class MainActivity : AppCompatActivity() , RecyclerItemClickListener{
             }
 
             "02" -> {
+                val intent = Intent(this, MVVMActivity::class.java)
+                startActivity(intent)
             }
         }
     }
