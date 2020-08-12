@@ -15,7 +15,6 @@ open class BaseActivity: AppCompatActivity()  {
     @Override
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
 
     override fun onStart() {

@@ -27,14 +27,17 @@ class MainActivity : AppCompatActivity() , RecyclerItemClickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this,
             R.layout.activity_main
         )
 
+        setUpRecyclerView()
+        setUpItems()
+    }
+
+    private fun setUpRecyclerView() {
         itemListAdapter = MainListAdapter(itemList)
         itemListManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-
         binding.recyclerView.apply {
             setHasFixedSize(true)
             layoutManager = itemListManager
@@ -42,13 +45,12 @@ class MainActivity : AppCompatActivity() , RecyclerItemClickListener{
         }
 
         itemListAdapter.setItemClickListener(this)
-
-        setUpItems()
     }
 
     private fun setUpItems() {
         itemList.add(RecyclerViewItem("01", "코루틴 예제"))
         itemList.add(RecyclerViewItem("02", "MVVM 디자인패턴 예제"))
+        itemList.add(RecyclerViewItem("03", "RxKotlin 예제"))
         itemListAdapter.notifyDataSetChanged()
     }
 
@@ -62,6 +64,11 @@ class MainActivity : AppCompatActivity() , RecyclerItemClickListener{
 
             "02" -> {
                 val intent = Intent(this, MVVMActivity::class.java)
+                startActivity(intent)
+            }
+
+            "03" -> {
+                val intent = Intent(this, RxKotlinActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -28,6 +28,12 @@ android {
     buildFeatures{
         dataBinding = true
     }
+
+    /* RxKotlin 사용에 필요, JavaVersion 1.8 적용 */
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -43,6 +49,12 @@ dependencies {
     /* 코루틴 사용을 위한 implement */
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.0'
+
+    /* RxKotlin 사용을 위한 implement */
+    implementation "io.reactivex.rxjava3:rxjava:3.0.5"
+    implementation "io.reactivex.rxjava3:rxkotlin:3.0.0"
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+    implementation 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
 
     /* RecyclerView 사용을 위한 implement */
     implementation 'com.android.support:recyclerview-v7:28.0.0'
