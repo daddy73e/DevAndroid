@@ -28,6 +28,7 @@ class RxKotlinActivity: AppCompatActivity(){
             R.layout.activity_kotlin
         )
 
+        /* txt값을 txtNum에 넣도록 subscribe */
         viewModel.getValueStream()
             .map { it.toString() }
             .subscribe { txtNum.text = it }

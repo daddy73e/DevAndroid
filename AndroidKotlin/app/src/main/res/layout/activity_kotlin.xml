@@ -5,46 +5,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/txtNum"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:textSize="32sp"
-            android:text="0" />
-
         <LinearLayout
-            android:id="@+id/layoutButtons"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtNum"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp">
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerVertical="true">
 
-            <Button
-                android:id="@+id/btnMinus"
+            <TextView
+                android:id="@+id/txtNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-1" />
+                android:textSize="32sp"
+                android:text="0" />
 
-            <Button
-                android:id="@+id/btnPlus"
+            <LinearLayout
+                android:id="@+id/layoutButtons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+1" />
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
 
+                <Button
+                    android:id="@+id/btnMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-1" />
+
+                <Button
+                    android:id="@+id/btnPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+1" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnMvvm"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="goMVVM">
+            </Button>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnMvvm"
-            android:layout_below="@id/layoutButtons"
-            android:layout_width="100dp"
 
-            android:layout_centerHorizontal="true"
-            android:layout_height="wrap_content"
-            android:text="goMVVM">
-        </Button>
     </RelativeLayout>
 </layout>
