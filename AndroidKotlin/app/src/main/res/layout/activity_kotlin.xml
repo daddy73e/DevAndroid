@@ -15,6 +15,7 @@
             android:text="0" />
 
         <LinearLayout
+            android:id="@+id/layoutButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/txtNum"
@@ -35,5 +36,15 @@
                 android:text="+1" />
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnMvvm"
+            android:layout_below="@id/layoutButtons"
+            android:layout_width="100dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:text="goMVVM">
+        </Button>
     </RelativeLayout>
 </layout>
