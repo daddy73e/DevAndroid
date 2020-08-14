@@ -23,6 +23,10 @@
 
         <activity android:name=".activity.RxKotlinActivity"/>
 
+        <activity android:name=".activity.AsyncTaskActivity"/>
+
+        <activity android:name=".activity.HandlerTimerActivity"/>
+
 
     </application>
 

@@ -48,29 +48,26 @@ class MainActivity : AppCompatActivity() , RecyclerItemClickListener{
     }
 
     private fun setUpItems() {
-        itemList.add(RecyclerViewItem("01", "코루틴 예제"))
+        itemList.add(RecyclerViewItem("01", "RxKotlin 예제"))
         itemList.add(RecyclerViewItem("02", "MVVM 디자인패턴 예제"))
-        itemList.add(RecyclerViewItem("03", "RxKotlin 예제"))
+        itemList.add(RecyclerViewItem("03", "Handler 예제"))
+        itemList.add(RecyclerViewItem("04", "AsyncTask 예제"))
+        itemList.add(RecyclerViewItem("05", "코루틴 예제"))
         itemListAdapter.notifyDataSetChanged()
     }
 
 
     override fun onClickListItem(rvItem: RecyclerViewItem) {
+        var intent: Intent? = null
+
         when (rvItem.index) {
-            "01" -> {
-                val intent = Intent(this, CoroutineActivity::class.java)
-                startActivity(intent)
-            }
-
-            "02" -> {
-                val intent = Intent(this, MVVMActivity::class.java)
-                startActivity(intent)
-            }
-
-            "03" -> {
-                val intent = Intent(this, RxKotlinActivity::class.java)
-                startActivity(intent)
-            }
+            "01" -> { intent = Intent(this, RxKotlinActivity::class.java) }
+            "02" -> { intent = Intent(this, MVVMActivity::class.java) }
+            "03" -> { intent = Intent(this, HandlerTimerActivity::class.java) }
+            "04" -> { intent = Intent(this, AsyncTaskActivity::class.java) }
+            "05" -> { intent = Intent(this, CoroutineActivity::class.java) }
         }
+
+        startActivity(intent)
     }
 }
